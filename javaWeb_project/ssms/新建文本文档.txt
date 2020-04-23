@@ -1,0 +1,71 @@
+这个是俊杰的项目
+
+
+
+学生成绩管理系统(ssms)【Student Score Manage System】
+
+学生成绩管理系统使用说明
+
+
+1.新建数据库ssms，将ssms.sql导入该数据库 数据库为mysql
+
+2.用解压文件打开ssms.war, 打开ssms.war\WEB-INF\classes\c3p0-config.xml文件，修改服务器所在数据库用户名和密码
+
+3.将ssms.war文件放入tomcat/webapps目录下
+
+4.启动tomcat服务器
+
+5.打开浏览器，输入 localhost:8080/ssms 进入登录界面
+
+6.输入用户名和密码访问系统
+ 用户名：admin
+ 密码：111111
+ 
+ 教师账号：
+	2012 
+	2011
+	2010
+	2009
+	2008
+	
+	
+ 学生账号：
+	201301001
+	201302002
+	201401001
+	201402002
+	
+ 密码都为：111111
+
+也可将ssms.zip项目文件导入eclipse使用
+注：将src下c3p0-config.xml中的用户名和密码改为自己数据库的用户名和密码
+
+7. 改URL   jdbc:mysql://localhost:3306/ssms?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+
+新版本的字符集的问提
+
+8. 改mysql-connector-java     改成 mysql-connector-java 5.1.47.jar 我单独放出来了，直接替换就好了
+
+因为版本的问题，他是几年前的版本
+
+9. 改sql语句和数据库表格名称                      改成SELECT * FROM system1      system改成system1
+
+由于MySQL版本的原因，在SystemInitListener中sql语句"SELECT * FROM system"报错，查了一下是system这个词在8.0版本为MySQL系统的所属名词，不能使用。因为我改为SELECT * FROM system1,同样的在数据库把表格system 改为system1.
+
+你可以按照他里面的项目导入的顺序来做，导入Eclipse
+
+10. 还有一个问题就是他的数据库的图片使用二进制的方式来存储，你可以去替换成别的图片，里面的学生的姓名也全是动画里面的人物，也得替换掉
+
+11. 它可以使用网业打开，最开头的第3步，你得去下一个tomecat
+
+12. 完成后启动tomecat   浏览器输入  localhost:8080/ssms/index.jsp 就可以进入主页
+
+
+
+
+
+
+
+
+
+
