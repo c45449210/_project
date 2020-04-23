@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="metting"
+  id="myeclipse.1405909672228"
+  context-root="/metting"
+  j2ee-spec="5.0"
+  archive="metting.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
